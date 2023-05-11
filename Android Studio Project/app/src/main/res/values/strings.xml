@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">The Vault</string>
+    <string name="log_in">Log In</string>
+    <string name="mail">Mail</string>
+    <string name="exclusive_for_secret_keepers_n">This is a beta release for login app, feel free to contribute</string>
+    <string name="login_btn">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="logo">logo</string>
+    <string name="welcome_sphynx">Sphynx Panel</string>
+    <string name="controlUname">Username</string>
+    <string name="contribute">This is a beta release for user panel app, feel free to contribute</string>
+    <string name="update">Update data</string>
+    <string name="sphynx_register">Sphynx Register</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="group_id">group id</string>
+    <string name="book_id">book id</string>
+    <string name="won_escape">Won Escape</string>
+    <string name="update_group">update group</string>
+    <string name="this_is_a_beta_release_of_the_vault">This is a beta release of the vault</string>
+    <string name="register">Register</string>
+</resources>
