@@ -1,0 +1,40 @@
+en
+conf t
+vlan 150
+name dmz-mark
+vlan 160 
+name wireless  OK
+vlan 170
+name servers  OK
+vlan 180
+name iot   OK
+vlan 190
+name treb-mark
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

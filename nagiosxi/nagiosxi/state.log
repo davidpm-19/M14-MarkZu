@@ -1,0 +1,26 @@
+2023-02-01 12:52:25,963 - Mock Version: 3.3
+2023-02-01 12:52:26,412 - Start: yum update
+2023-02-01 12:52:29,195 - Finish: yum update
+2023-02-01 12:52:29,198 - Finish: chroot init
+2023-02-01 12:52:29,200 - Start: buildsrpm
+2023-02-01 12:52:29,201 - Start: rpmbuild -bs
+2023-02-01 12:52:29,319 - Finish: rpmbuild -bs
+2023-02-01 12:52:29,320 - Finish: buildsrpm
+2023-02-01 12:52:29,321 - Start: clean chroot
+2023-02-01 12:52:30,363 - Finish: clean chroot
+2023-02-01 12:52:30,364 - Finish: run
+2023-02-01 12:52:32,708 - Mock Version: 3.3
+2023-02-01 12:52:33,187 - Start: yum update
+2023-02-01 12:52:34,911 - Finish: yum update
+2023-02-01 12:52:34,913 - Finish: chroot init
+2023-02-01 12:52:34,914 - Start: build phase for nagiosxi-deps-el7-5.9.3-1.src.rpm
+2023-02-01 12:52:34,915 - Start: build setup for nagiosxi-deps-el7-5.9.3-1.src.rpm
+2023-02-01 12:52:36,001 - Finish: build setup for nagiosxi-deps-el7-5.9.3-1.src.rpm
+2023-02-01 12:52:36,002 - Start: Outputting list of installed packages
+2023-02-01 12:52:36,125 - Finish: Outputting list of installed packages
+2023-02-01 12:52:36,125 - Start: rpmbuild nagiosxi-deps-el7-5.9.3-1.src.rpm
+2023-02-01 12:52:36,257 - Finish: rpmbuild nagiosxi-deps-el7-5.9.3-1.src.rpm
+2023-02-01 12:52:36,259 - Finish: build phase for nagiosxi-deps-el7-5.9.3-1.src.rpm
+2023-02-01 12:52:36,260 - Start: clean chroot
+2023-02-01 12:52:37,276 - Finish: clean chroot
+2023-02-01 12:52:37,276 - Finish: run

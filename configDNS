@@ -1,0 +1,58 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	markzu.enigma.who. root.enigma.who. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+; Nameservers
+@	IN	NS	markzu.enigma.who.
+@	IN	MX	10	smtpServer.enigma.who.
+
+; Domain Servers
+markzu		IN	A	192.168.0.37
+smtpServer	IN	A	192.168.0.35
+apacheServer	IN	A	192.168.0.34
+ftpServer	IN	A	192.168.0.36
+databaseServer	IN	A	3.251.28.226
+monitorServer	IN	A	192.168.0.98
+
+; Domain Devices
+
+; CPD
+cameraS0	IN	A	192.168.0.130
+; HECATOMB
+cameraS1C1	IN	A	192.168.0.131
+cameraS1C2	IN	A	192.168.0.132
+speakrS1V1	IN	A	192.168.0.139
+speakrS1V2	IN	A	192.168.0.140
+; DEMENTIA
+cameraS2C1	IN	A	192.168.0.133
+cameraS2C2	IN	A	192.168.0.134
+cameraS2C3	IN	A	192.168.0.135
+speakrS2V1	IN	A	192.168.0.141
+speakrS2V2	IN	A	192.168.0.142
+; ACE OF SPADES
+cameraS3C1	IN	A	192.168.0.136
+cameraS3C2	IN	A	192.168.0.137
+cameraS3C3	IN	A	192.168.0.138
+speakrS3V1	IN	A	192.168.0.143
+speakrS3V2	IN	A	192.168.0.144
+speakrS3V3	IN	A	192.168.0.145
+speakrS3V4	IN	A	192.168.0.146
+
+; Domain Service
+smtp	IN	A	192.168.180.49
+db	IN	A	192.168.180.49
+ftp	IN	A	192.168.180.49
+www	IN	A	192.168.180.49
+http	IN	A	192.168.180.49
+web	IN	A	192.168.180.49
+
+index	IN	CNAME	apacheServer
+adminDB	IN	CNAME	apacheServer
+userDB	IN	CNAME	apacheServer
+
