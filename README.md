@@ -1,2 +1,6 @@
 # M14-MarkZu
-Github para proyecto
+Rama con ficheros de configuración y/o scripts de 
+· Nagios
+· Dns
+· Wireguard
+· PfSense 
