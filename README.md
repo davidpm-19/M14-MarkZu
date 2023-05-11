@@ -1,2 +1,2 @@
 # M14-MarkZu
-Github para proyecto
+Proyecto de Android Studio
