@@ -1,0 +1,291 @@
+/*###############################################################
+
+Font Section 
+
+###############################################################*/
+
+
+@font-face {
+    font-family: 'colfax-light';
+    src: url("../fonts/colfax-light.woff") format("woff"), url("../fonts/colfax-light.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'colfax-medium';
+    src: url("../fonts/colfax-medium.woff") format("woff"), url("../fonts/colfax-medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'colfax-bold';
+    src: url("../fonts/colfax-bold.woff") format("woff"), url("../fonts/colfax-bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+@media (max-width: 760px) {
+    .side-menu{
+        display: none;
+    }
+}
+
+/*###############################################################
+
+General Style Section 
+
+###############################################################*/
+
+* {
+    box-sizing: border-box;
+    cursor: default !important;
+}
+html, body {
+    color: #99a0b0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #f2f3f5;
+    font-size: 16px;
+    line-height: 120%;
+    font-family: 'colfax-light', serif;
+}
+
+
+/*###############################################################
+
+General Dashboard Section 
+
+###############################################################*/
+
+.title {
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    height: 100%;
+    grid-gap: 0;
+    grid-template-rows: 80px auto;
+    grid-template-areas: 'menu search' 'menu content';
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+/*###############################################################
+
+Side Menu Section 
+
+###############################################################*/
+
+.side-menu {
+    grid-area: menu;
+    padding-bottom: 3em;
+    overflow: auto;
+    background: #fff;
+    border-right: 1px solid #ede8f0;
+}
+
+.side-menu .admin {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0 3em;
+}
+.side-menu .admin .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.side-menu .admin .avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.side-menu .admin figcaption {
+    margin: 0;
+    padding: 0 0 0 1em;
+    color: #1b253d;
+    font-weight: 700;
+    font-size: 0.875em;
+    line-height: 100%;
+}
+.side-menu nav {
+    display: block;
+    padding: 0 3em;
+}
+.side-menu nav section {
+    display: block;
+    padding: 3em 0 0;
+}
+.side-menu nav h3 {
+    margin: 0;
+    font-size: .875em;
+    text-transform: uppercase;
+    color: #4b84fe;
+    font-weight: 600;
+}
+.side-menu nav ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.side-menu nav li {
+    display: block;
+    padding: 0;
+    margin: 1em 0 0;
+}
+.side-menu nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #99a0b0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .875em;
+    transition: color .15s ease;
+}
+.side-menu nav li a:hover {
+    color: #1b253d;
+}
+.side-menu nav li a.active {
+    color: #4b84fe;
+}
+
+/*###############################################################
+
+General Panels Section 
+
+###############################################################*/
+
+.content-panels {
+    grid-area: content;
+    padding: 3em;
+    padding-top: 0.009em !important;
+    overflow: auto;
+}
+.content-panels .panels-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-panels .panels-title h1 {
+    font-size: 1.375em;
+    line-height: 100%;
+    color: #1b253d;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.content-panels .reports {
+    padding: 3em 0 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-gap: 2em;
+}
+.content-panels .reports .report {
+    background: #fff;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 3em;
+    border: 1px solid #ede8f0;
+    border-radius: 5px;
+}
+.content-panels .reports .report .repIcon svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+.content-panels .reports .report .repIcon svg path, .content-panels .reports .report .repIcon svg circle {
+    fill: #99a0b0;
+}
+.content-panels .reports .report .reporting {
+    padding-left: 1.25em;
+    white-space: nowrap;
+}
+.content-panels .reports .report .reporting .repTitle {
+    display: block;
+    font-size: 2em;
+    line-height: 150%;
+    color: #1b253d;
+}
+.content-panels .reports .report.active svg circle, .content-panels .reports .report.active svg path {
+    fill: #4b84fe;
+}
+.content-panels .connections {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-gap: 2em;
+}
+.content-panels .connections .connection {
+    background: #fff;
+    height: 320px;
+    text-align: center;
+    padding: 3em;
+    border: 1px solid #ede8f0;
+    border-radius: 5px;
+}
+.content-panels .connections .connection .space {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.content-panels .connections .connection .conn-content {
+    white-space: no-wrap;
+}
+.content-panels .connections .connection .conn-content .connTitle {
+    margin: 2em 0 .75em;
+    color: #1b253d;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 100%;
+}
+.content-panels .connections .connection .box-actions {
+    margin-top: 1.25em;
+    padding-top: 1.25em;
+    width: 100%;
+    border-top: 1px solid #ede8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-panels .connections .connection .box-actions button {
+    border: 0;
+    background: none;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+}
+.content-panels .connections .connection .box-actions button svg {
+    position: relative;
+    top: 2px;
+}
+.content-panels .connections .connection .box-actions button svg path, .content-panels .connections .connection .box-actions button svg circle {
+    fill: #b6bbc6;
+    transition: fill .15s ease;
+}
+.content-panels .connections .connection .box-actions button:hover svg path, .content-panels .connections .connection .box-actions button:hover svg circle {
+    fill: #01050f;
+}

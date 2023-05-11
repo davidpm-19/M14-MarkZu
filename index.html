@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Enigma</title>
+    <meta name="title" content="Emigma">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/Favicons/site.webmanifest">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="./js/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/externalScripts/flickity.min.js"></script>
+    <script src="./js/externalScripts/core.min.js"></script>
+    <script src="./js/disableOptions.js"></script>
+  </head>
+
+<body style="overflow-x:hidden">
+<!--Booking Correct-->
+<div class="toast__container" style="z-index: 99999">
+  <div class="toast__cell">
+    <div class="toast toast--green">
+      <div class="toast__icon">
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Success</p>
+        <p class="toast__message">Booking submited, please check your email for more details.</p>
+      </div>
+      <div class="toast__close">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+          <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Login Modal-->
+  <div class="modal">
+    <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span
+        class="hide-mobile">ESC</span></button>
+    <div class="modal-content">
+      <div class="form-content">
+        <h2 class="modal-title">Sphinx Login</h2>
+        <p class="modal-subtitle">We're still developing the Client Panel, let us know if you find errors or want to
+          suggest improvements</p>
+        <form class="form" name="sphinxForm" method="POST" action="./php/loginPage.php"><input type="hidden" name="form-name" value="sphinxForm" />
+          <div class="group">
+            <input type="text" id="userName" name="user-name" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="user-name">Email</label>
+            <span class="border"></span>
+          </div>
+          <div class="group">
+            <input type="password" name="passwd" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="passwd">Password</label>
+            <span class="border"></span>
+          </div>
+          <button type="submit" class="button">Login as a Sphinx</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<!--Booking Modal-->
+  <div class="modal2">
+    <button type="button" class="modal2-close modal2-toggle"><i class="icon" data-feather="x"></i><span
+        class="hide-mobile">ESC</span></button>
+    <div class="modal2-content">
+      <div class="form-content">
+        <h2 class="modal2-title">Booking form</h2>
+        <p class="modal2-subtitle">This data won't be used to create Users and will only be saved in order to check booking details</p>
+        <form class="form form-2" name="bookForm" method="POST" action="php/bookingPage.php"><input type="hidden" name="form-name" value="bookForm" />
+          <div class="group">
+            <input type="text" id="fullname" name="fname" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="fname">Full Name</label>
+            <p class="error" id="name-error"></p>
+            <span class="border"></span>
+          </div>
+          <div class="group">
+            <input type="email" name="mail" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="mail">Mail</label>
+            <span class="border"></span>
+          </div>
+          <div class="group" style="display: flex">
+            <input type="text" name="g_name" placeholder="&nbsp;" autocomplete="off" required style="width: 48%">
+              <label for="g_name">Name of Group</label>
+            <p class="error" id="gname-error"></p>
+
+            <div style="width: 1%"></div>
+
+            <span class="border"></span>
+            <input type="number" name="num" placeholder="&nbsp;" autocomplete="off" required style="width: 48%">
+              <label for="num" style="left: 50.05%">Number of Group Members</label>
+            <p class="error" id="gnum-error"></p>
+
+            <span class="border"></span>
+          </div>
+          <div class="group" title="Dementia, AoS or Hecatomb">
+            <input type="text" name="book-room" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="book-room">Escape Room</label>
+            <p class="error" id="escape-error"></p>
+
+            <span class="border"></span>
+          </div>
+          <div class="group">
+            <input type="datetime-local" name="book-time" value="2023-06-12T19:30" min="2023-06-07T00:00" max="2050-06-14T00:00" placeholder="&nbsp;" autocomplete="off" required>
+            <span class="border"></span>
+          </div>
+          <button type="submit" class="button" id="modal2-button">Book</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<!--Main content-->
+  <div class="content">
+    <a class="logo"><div class="wrapper"><h1 class="titulo" id="logoId">ENIGMA</h1></div></a>
+    <div class="head-section">
+      <h1 class="title">Designed to challenge</h1>
+      <h1 class="title shift">
+          Epic Adventurers
+      </h1>
+      <button class="button modal-toggle">Sphinx Login</button>
+      <p class="subtitle">Join as a Registered User</p>
+    </div>
+    <div class="indicate"></div>
+    <div class="screen-wrapper">
+      <img src="images/GraphicElements/screen.png" class="screen" alt="screen"/>
+    </div>
+    <section class="section section-features">
+      <h2 class="title">An intentionally dead simple yet incredible escape rooms designs</h2>
+      <div class="features">
+        <img src="images/GraphicElements/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay"/>
+        <img src="images/GraphicElements/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay"/>
+        <img src="images/GraphicElements/overlay-top.svg" class="overlay-top show-mobile" alt="overlay"/>
+        <img src="images/GraphicElements/overlay-bottom.svg" class="overlay-bottom show-mobile" alt="overlay"/>
+        <div class="row noDis">
+          <div class="feature"><i class="icon" data-feather="x"></i> No easy puzzles</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No unlimited tips</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No boring rooms</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No repetitive challenges</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No exploits</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No puzzle leaks.</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No doppelganger designs</div>
+          <!-- Repeat-->
+          <div class="feature"><i class="icon" data-feather="x"></i> No unlimited tips</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No easy puzzles</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No repetitive challenges</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No exploits</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No boring rooms</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No puzzle leaks.</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> No doppelganger designs</div>
+        </div>
+        <div class="row adv">
+          <div class="feature"><i class="icon" data-feather="check"></i>Brain Demolishing Puzzles</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Physical Challenges</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>3 in 1 Escape Rooms</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Hall of Fame</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Client Benefits</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Accurate Room Design</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Autointeractive Rooms</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Merchandising Shop</div>
+          <!-- Repeat-->
+          <div class="feature"><i class="icon" data-feather="check"></i>Autointeractive Rooms</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>3 in 1 Escape Rooms</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Hall of Fame</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Brain Demolishing Puzzles</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Physical Challenges</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Client Benefits</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Accurate Room Design</div>
+          <div class="feature"><i class="icon" data-feather="check"></i>Merchandising Shop</div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-customers">
+      <h2 class="title" id="customerTitle">A wide number of clients rate positive opinions about escape rooms</h2>
+      <div class="cards">
+        <img src="images/GraphicElements/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay"/>
+        <img src="images/GraphicElements/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay"/>
+        <div class="zero-slider">
+          <div class="slide"><img src="images/CustomerStars/profile1.svg" alt="Customer_1"/></div>
+          <div class="slide"><img src="images/CustomerStars/profile2.svg" alt="Customer_2"/></div>
+          <div class="slide"><img src="images/CustomerStars/profile3.svg" alt="Customer_3"/></div>
+          <div class="slide"><img src="images/CustomerStars/profile4.svg" alt="Customer_4"/></div>
+          <div class="slide"><img src="images/CustomerStars/profile5.svg" alt="Customer_5"/></div>
+          <div class="slide"><img src="images/CustomerStars/profile6.svg" alt="Customer_6"/></div>
+        </div>
+      </div>
+    </section>
+    <section class="section mapLoc">
+      <h2 class="title" id="mapTitle">Quick reserve, without cancellation cost if you notify us 48h in advance and safely wherever you are</h2>
+        <div class="map-container">
+          <img src="images/Map/wmap.png">
+          <div class="point barcelona" title="Barcelona"></div>
+        </div>
+    </section>
+    <section class="section book">
+      <div class="book-content">
+        <h1 class="title">Book your Escape Experience Now</h1>
+        <button class="button white modal2-toggle">Open Book Form</button>
+      </div>
+      <div class="zero-slider">
+        <div class="slide"><img src="images/EscapeScreens/dementia.png" alt="inboxzero"/></div>
+        <div class="slide"><img src="images/EscapeScreens/AceOfSpades.png" alt="inboxzero"/></div>
+        <div class="slide"><img src="images/EscapeScreens/hecatomb.png" alt="inboxzero"/></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy; Enigma Escape Rooms</p>
+    </footer>
+    </div>
+<script>
+  function _0x4ad4(_0x39e9be,_0x5035d3){const _0x2c671a=_0xb4d5();return _0x4ad4=function(_0x1ab573,_0x284e24){_0x1ab573=_0x1ab573-(-0xee6+-0x13fa+0x2459);let _0x14b2fe=_0x2c671a[_0x1ab573];return _0x14b2fe;},_0x4ad4(_0x39e9be,_0x5035d3);}const _0x5934ba=_0x4ad4;(function(_0x10e71f,_0x16440a){const _0x12ed11=_0x4ad4,_0x5ed344=_0x10e71f();while(!![]){try{const _0x3fc56c=-parseInt(_0x12ed11(0x184))/(-0x29e+-0x7f3+-0x1*-0xa92)*(-parseInt(_0x12ed11(0x19e))/(-0x19a2+-0x2710+0x40b4))+-parseInt(_0x12ed11(0x213))/(-0x1*-0xfb3+-0x132e+0x2*0x1bf)*(parseInt(_0x12ed11(0x207))/(-0x4*0x490+-0x1*0x1eef+0x3133))+parseInt(_0x12ed11(0x1b9))/(0x119*-0xf+-0xe4f+0x1ecb)+parseInt(_0x12ed11(0x1f1))/(-0xf09+-0x22d1*-0x1+0x232*-0x9)*(parseInt(_0x12ed11(0x1fb))/(-0x346*-0x3+-0x1dc4*-0x1+0xd*-0x30b))+parseInt(_0x12ed11(0x219))/(0x140+-0x2b*-0x8e+0x2*-0xc89)+parseInt(_0x12ed11(0x1f4))/(-0x266e+0xdd*0x9+0x1eb2)+-parseInt(_0x12ed11(0x1db))/(-0x23ca+-0x7cf*-0x2+0x1436);if(_0x3fc56c===_0x16440a)break;else _0x5ed344['push'](_0x5ed344['shift']());}catch(_0x412f85){_0x5ed344['push'](_0x5ed344['shift']());}}}(_0xb4d5,-0x3fc99+0x14f67+0xd31f6*0x1),$(document)[_0x5934ba(0x19a)](function(){const _0x6ca509=_0x5934ba,_0x452e8c={'MkMnq':function(_0x4a3724,_0x33db25){return _0x4a3724(_0x33db25);}};_0x452e8c[_0x6ca509(0x1c8)]($,this)[_0x6ca509(0x1d4)](0x204a+-0x1cfb+-0x34f);}),window[_0x5934ba(0x1b6)]=function(){const _0x27fbf1=_0x5934ba,_0x2e46bc={'AwxKa':function(_0x6ce3ce,_0x4efecd){return _0x6ce3ce(_0x4efecd);},'NKDzw':function(_0x284c3d,_0x5c1121){return _0x284c3d(_0x5c1121);},'RjAqr':_0x27fbf1(0x1b2)+_0x27fbf1(0x1ec),'AwWCY':_0x27fbf1(0x1ea),'IVcDp':function(_0x1464a4,_0x4923df){return _0x1464a4===_0x4923df;},'UuZKz':function(_0x2dab4a,_0x4d4a66){return _0x2dab4a(_0x4d4a66);},'JdsIg':_0x27fbf1(0x1ac),'csexb':function(_0x28254f,_0x3d2641,_0xe5e73e){return _0x28254f(_0x3d2641,_0xe5e73e);}};_0x2e46bc[_0x27fbf1(0x1c4)](_0x2e46bc[_0x27fbf1(0x20b)]($,_0x2e46bc[_0x27fbf1(0x1ab)])[_0x27fbf1(0x1d6)](_0x2e46bc[_0x27fbf1(0x206)]),'1')&&_0x2e46bc[_0x27fbf1(0x188)](setTimeout,function(){const _0x52ac0b=_0x27fbf1;_0x2e46bc[_0x52ac0b(0x1a8)]($,_0x2e46bc[_0x52ac0b(0x1ab)])[_0x52ac0b(0x199)](_0x2e46bc[_0x52ac0b(0x1b3)],function(){const _0x59c764=_0x52ac0b;_0x2e46bc[_0x59c764(0x19f)]($,this)[_0x59c764(0x200)]();});},-0xe04+-0x199*-0x10+-0xe*-0x92);},modaln1=document[_0x5934ba(0x1c2)+_0x5934ba(0x1a2)+'me'](_0x5934ba(0x1e8))[0x138+-0xca*-0x7+0x2*-0x35f],modaln2=document[_0x5934ba(0x1c2)+_0x5934ba(0x1a2)+'me'](_0x5934ba(0x1aa))[-0x5*-0x663+-0x1b1*0xb+-0xd54],$(_0x5934ba(0x1cc)+_0x5934ba(0x1bd))[_0x5934ba(0x1dc)](function(){const _0x4dd2ed=_0x5934ba,_0x3d48c5={'KLLyF':function(_0x42bec2,_0x1a045e){return _0x42bec2(_0x1a045e);},'roshY':_0x4dd2ed(0x18f),'PCRUp':_0x4dd2ed(0x1ef),'qwtWY':function(_0x45382b,_0x35398b){return _0x45382b(_0x35398b);},'CzinW':_0x4dd2ed(0x1d9),'VrcWO':_0x4dd2ed(0x185)+_0x4dd2ed(0x1f9),'TSCWz':_0x4dd2ed(0x1be),'ALZbs':_0x4dd2ed(0x1a4)};modaln1[_0x4dd2ed(0x18e)+_0x4dd2ed(0x1b4)](),_0x3d48c5[_0x4dd2ed(0x1ed)]($,_0x3d48c5[_0x4dd2ed(0x1ca)])[_0x4dd2ed(0x182)+'s'](_0x3d48c5[_0x4dd2ed(0x218)]),_0x3d48c5[_0x4dd2ed(0x204)]($,_0x3d48c5[_0x4dd2ed(0x20e)])[_0x4dd2ed(0x182)+'s'](_0x3d48c5[_0x4dd2ed(0x18b)]),_0x3d48c5[_0x4dd2ed(0x204)]($,_0x3d48c5[_0x4dd2ed(0x1e3)])[_0x4dd2ed(0x182)+'s'](_0x3d48c5[_0x4dd2ed(0x201)]);}),$(_0x5934ba(0x211)+_0x5934ba(0x1e7))[_0x5934ba(0x1dc)](function(){const _0x1eb6f5=_0x5934ba,_0x39c460={'tXvwM':function(_0x9c2126,_0x5580cf){return _0x9c2126(_0x5580cf);},'nTmuG':_0x1eb6f5(0x1eb),'xEFXQ':_0x1eb6f5(0x1f0)+'w','pUcxm':function(_0x301f13,_0x67e30e){return _0x301f13(_0x67e30e);},'QPCZc':_0x1eb6f5(0x1d9),'oVUDY':_0x1eb6f5(0x185)+_0x1eb6f5(0x1f9),'uPrFX':function(_0x591ed0,_0x35c6fe){return _0x591ed0(_0x35c6fe);},'azvZg':_0x1eb6f5(0x1be),'CQWrM':_0x1eb6f5(0x1a4)};modaln2[_0x1eb6f5(0x18e)+_0x1eb6f5(0x1b4)](),_0x39c460[_0x1eb6f5(0x214)]($,_0x39c460[_0x1eb6f5(0x202)])[_0x1eb6f5(0x182)+'s'](_0x39c460[_0x1eb6f5(0x1f3)]),_0x39c460[_0x1eb6f5(0x1b5)]($,_0x39c460[_0x1eb6f5(0x1a1)])[_0x1eb6f5(0x182)+'s'](_0x39c460[_0x1eb6f5(0x1ce)]),_0x39c460[_0x1eb6f5(0x1c9)]($,_0x39c460[_0x1eb6f5(0x1e4)])[_0x1eb6f5(0x182)+'s'](_0x39c460[_0x1eb6f5(0x1c5)]);}),$(document)[_0x5934ba(0x1d5)](function(_0x19206c){const _0x4159cc=_0x5934ba,_0x1693aa={'QtQNl':function(_0x39eb45,_0x38ad3a){return _0x39eb45===_0x38ad3a;},'ROjKA':_0x4159cc(0x181),'MfKeI':function(_0x323e29,_0x12dd06){return _0x323e29(_0x12dd06);},'sxVgy':_0x4159cc(0x18f),'jGQfV':_0x4159cc(0x1ef),'YgXMb':function(_0x15fcbd,_0x51b43e){return _0x15fcbd(_0x51b43e);},'SeDZh':_0x4159cc(0x1d9),'CGsno':_0x4159cc(0x185)+_0x4159cc(0x1f9),'llWlN':_0x4159cc(0x1be),'fppVG':_0x4159cc(0x1a4)};_0x1693aa[_0x4159cc(0x1e1)](_0x19206c[_0x4159cc(0x20d)],_0x1693aa[_0x4159cc(0x194)])&&(_0x1693aa[_0x4159cc(0x17f)]($,_0x1693aa[_0x4159cc(0x1c0)])[_0x4159cc(0x1c3)+'s'](_0x1693aa[_0x4159cc(0x1b0)]),_0x1693aa[_0x4159cc(0x1a3)]($,_0x1693aa[_0x4159cc(0x1bc)])[_0x4159cc(0x1c3)+'s'](_0x1693aa[_0x4159cc(0x191)]),_0x1693aa[_0x4159cc(0x1a3)]($,_0x1693aa[_0x4159cc(0x1f8)])[_0x4159cc(0x1c3)+'s'](_0x1693aa[_0x4159cc(0x1f2)]));}),$(document)[_0x5934ba(0x1d5)](function(_0x589e0f){const _0x1acdb3=_0x5934ba,_0x187ac5={'nGwKT':function(_0x2df4c4,_0x33f723){return _0x2df4c4===_0x33f723;},'owcjI':_0x1acdb3(0x181),'qSewe':function(_0x564e1d,_0xb0a0b9){return _0x564e1d(_0xb0a0b9);},'EBYLd':_0x1acdb3(0x1eb),'BrtBl':_0x1acdb3(0x1f0)+'w','eiUCe':_0x1acdb3(0x1d9),'dNaIq':_0x1acdb3(0x185)+_0x1acdb3(0x1f9),'nAXSU':_0x1acdb3(0x1be),'kyMXT':_0x1acdb3(0x1a4)};_0x187ac5[_0x1acdb3(0x1f6)](_0x589e0f[_0x1acdb3(0x20d)],_0x187ac5[_0x1acdb3(0x18c)])&&(_0x187ac5[_0x1acdb3(0x1cf)]($,_0x187ac5[_0x1acdb3(0x205)])[_0x1acdb3(0x1c3)+'s'](_0x187ac5[_0x1acdb3(0x1ba)]),_0x187ac5[_0x1acdb3(0x1cf)]($,_0x187ac5[_0x1acdb3(0x18d)])[_0x1acdb3(0x1c3)+'s'](_0x187ac5[_0x1acdb3(0x1c7)]),_0x187ac5[_0x1acdb3(0x1cf)]($,_0x187ac5[_0x1acdb3(0x1cd)])[_0x1acdb3(0x1c3)+'s'](_0x187ac5[_0x1acdb3(0x20a)]));}),$(function(){const _0x4bec1f=_0x5934ba,_0x4b50ff={'CqLWs':function(_0x1f1c69,_0x6cbeff){return _0x1f1c69(_0x6cbeff);},'GOViS':_0x4bec1f(0x1d0)+'er','KKUmp':_0x4bec1f(0x1a9),'jZsBl':function(_0x2a765c){return _0x2a765c();},'sSDMk':_0x4bec1f(0x1ae)+_0x4bec1f(0x1d7)+_0x4bec1f(0x1fc)+_0x4bec1f(0x193)+_0x4bec1f(0x1e0)+_0x4bec1f(0x1fa)+_0x4bec1f(0x1a0),'LRJWe':_0x4bec1f(0x203)};_0x4b50ff[_0x4bec1f(0x1dd)]($,_0x4b50ff[_0x4bec1f(0x1af)])[_0x4bec1f(0x1c1)]({'pauseAutoPlayOnHover':![],'prevNextButtons':![],'cellAlign':_0x4b50ff[_0x4bec1f(0x17c)],'freeScroll':![],'wrapAround':![],'draggable':![],'pageDots':![],'autoPlay':0xbb8,'fade':!![]}),feather[_0x4bec1f(0x190)](),_0x4b50ff[_0x4bec1f(0x19c)](ScrollReveal)[_0x4bec1f(0x197)](_0x4b50ff[_0x4bec1f(0x20f)],{'distance':_0x4b50ff[_0x4bec1f(0x210)],'duration':0x7d0,'mobile':![],'reset':![],'opacity':0x0});}),$(document)[_0x5934ba(0x19a)](function(){const _0x3caf86=_0x5934ba,_0x51c0ea={'RCATs':function(_0x22baf6,_0x1c2a21){return _0x22baf6===_0x1c2a21;},'dzLuU':_0x3caf86(0x1f5),'GjKeH':_0x3caf86(0x17a),'ONAkN':_0x3caf86(0x1ff),'MXrYt':function(_0x38fe2d,_0x1b0f80){return _0x38fe2d(_0x1b0f80);},'JFYet':_0x3caf86(0x1eb),'IhjeN':_0x3caf86(0x1f0)+'w','yqCcp':function(_0x23d09b,_0x359764){return _0x23d09b(_0x359764);},'RXdtt':_0x3caf86(0x1be),'FXQqR':_0x3caf86(0x1a4),'EXnzL':_0x3caf86(0x1b8),'jXmxf':_0x3caf86(0x1fe),'ZzIfc':_0x3caf86(0x20c)+_0x3caf86(0x1b7),'gAcgL':_0x3caf86(0x187)+_0x3caf86(0x212)+_0x3caf86(0x1a5)+_0x3caf86(0x209),'kvUQL':function(_0x17f889,_0x716692){return _0x17f889(_0x716692);},'IFTpj':_0x3caf86(0x1d9),'fkelN':_0x3caf86(0x185)+_0x3caf86(0x1f9)},_0x53fa5e=new URLSearchParams(window[_0x3caf86(0x1e2)][_0x3caf86(0x21a)]);if(_0x51c0ea[_0x3caf86(0x189)](_0x53fa5e[_0x3caf86(0x19d)](_0x51c0ea[_0x3caf86(0x215)]),_0x51c0ea[_0x3caf86(0x1cb)])){const _0x1147b8=_0x51c0ea[_0x3caf86(0x17b)][_0x3caf86(0x183)]('|');let _0xf785ad=-0x66*0x5d+-0x2547*-0x1+-0x39;while(!![]){switch(_0x1147b8[_0xf785ad++]){case'0':_0x51c0ea[_0x3caf86(0x1b1)]($,_0x51c0ea[_0x3caf86(0x198)])[_0x3caf86(0x182)+'s'](_0x51c0ea[_0x3caf86(0x1d3)]);continue;case'1':_0x51c0ea[_0x3caf86(0x1ad)]($,_0x51c0ea[_0x3caf86(0x1bf)])[_0x3caf86(0x182)+'s'](_0x51c0ea[_0x3caf86(0x1ee)]);continue;case'2':_0x51c0ea[_0x3caf86(0x189)](_0x53fa5e[_0x3caf86(0x19d)](_0x51c0ea[_0x3caf86(0x1e6)]),_0x51c0ea[_0x3caf86(0x1f7)])&&_0x51c0ea[_0x3caf86(0x1b1)]($,_0x51c0ea[_0x3caf86(0x179)])[_0x3caf86(0x1df)](_0x51c0ea[_0x3caf86(0x1a7)]);continue;case'3':modaln2[_0x3caf86(0x18e)+_0x3caf86(0x1b4)]();continue;case'4':_0x51c0ea[_0x3caf86(0x1e5)]($,_0x51c0ea[_0x3caf86(0x1e9)])[_0x3caf86(0x182)+'s'](_0x51c0ea[_0x3caf86(0x195)]);continue;}break;}}}),$(document)[_0x5934ba(0x19a)](function(){const _0x4b287b=_0x5934ba,_0x2771d6={'KOFYu':function(_0x59afe4,_0x364889){return _0x59afe4===_0x364889;},'ymMkH':_0x4b287b(0x1f5),'OwsxU':_0x4b287b(0x17d),'gnOKn':function(_0xdfd9,_0x38b62a){return _0xdfd9(_0x38b62a);},'TLHeQ':_0x4b287b(0x1b2)+_0x4b287b(0x1ec),'ZvFjh':_0x4b287b(0x1ac)},_0x3f3d60=new URLSearchParams(window[_0x4b287b(0x1e2)][_0x4b287b(0x21a)]);_0x2771d6[_0x4b287b(0x1c6)](_0x3f3d60[_0x4b287b(0x19d)](_0x2771d6[_0x4b287b(0x192)]),_0x2771d6[_0x4b287b(0x1d8)])&&_0x2771d6[_0x4b287b(0x216)]($,_0x2771d6[_0x4b287b(0x19b)])[_0x4b287b(0x1d6)](_0x2771d6[_0x4b287b(0x1da)],0x267a+0x2cd*0x5+0x3*-0x117e);}),$(document)[_0x5934ba(0x19a)](function(){const _0x3fb543=_0x5934ba,_0x33d919={'agoSe':function(_0x23d8aa,_0xd946c1){return _0x23d8aa(_0xd946c1);},'skhGr':function(_0xca40cf,_0x33206c){return _0xca40cf(_0x33206c);},'oDEoG':_0x3fb543(0x217),'zBAmo':_0x3fb543(0x1ea),'YZfCC':function(_0x3be3ce,_0x40882b){return _0x3be3ce(_0x40882b);},'RzmXD':_0x3fb543(0x1bb)+_0x3fb543(0x1a6)};_0x33d919[_0x3fb543(0x1d1)]($,_0x33d919[_0x3fb543(0x1d2)])[_0x3fb543(0x1dc)](function(_0x1af4e3){const _0xf19cd=_0x3fb543,_0x334e80={'cHlLD':function(_0x4dd66e,_0x1982a9){const _0x4d0983=_0x4ad4;return _0x33d919[_0x4d0983(0x1de)](_0x4dd66e,_0x1982a9);}};_0x1af4e3[_0xf19cd(0x180)+_0xf19cd(0x18a)]();var _0x310ce1=_0x33d919[_0xf19cd(0x186)]($,this)[_0xf19cd(0x196)](_0x33d919[_0xf19cd(0x208)]);_0x310ce1[_0xf19cd(0x199)](_0x33d919[_0xf19cd(0x17e)],function(){const _0x7f9bb3=_0xf19cd;_0x334e80[_0x7f9bb3(0x1fd)]($,this)[_0x7f9bb3(0x200)]();});});}));function _0xb4d5(){const _0x5307c3=['click','CqLWs','agoSe','innerText','s,\x20.cards,','QtQNl','location','TSCWz','azvZg','kvUQL','EXnzL','ggle','modal','IFTpj','slow','.modal2','ntainer','KLLyF','FXQqR','modal-show','modal2-sho','6JElWGN','fppVG','xEFXQ','4156488FvtUkT','success','nGwKT','jXmxf','llWlN','urred','\x20.zero-sli','3883901PtbCOc','e,\x20.screen','cHlLD','handle','3|0|4|1|2','remove','ALZbs','nTmuG','40px','qwtWY','EBYLd','JdsIg','276zJRuxx','oDEoG','ames','kyMXT','UuZKz','#escape-er','key','CzinW','sSDMk','LRJWe','.modal2-to','troduce\x20on','11139DJeXnv','tXvwM','dzLuU','gnOKn','.toast','PCRUp','4734360tApqhv','search','ZzIfc','false','ONAkN','KKUmp','true','zBAmo','MfKeI','preventDef','Escape','toggleClas','split','1qcycaS','content-bl','skhGr','Please,\x20in','csexb','RCATs','ault','VrcWO','owcjI','eiUCe','scrollInto','.modal','replace','CGsno','ymMkH',',\x20.feature','ROjKA','fkelN','parent','reveal','JFYet','fadeOut','ready','TLHeQ','jZsBl','get','2372758JvOTlJ','AwxKa','der','QPCZc','sByClassNa','YgXMb','no-scroll','ly\x20valid\x20n','ose','gAcgL','NKDzw','center','modal2','RjAqr','opacity','yqCcp','.head-sect','GOViS','jGQfV','MXrYt','.toast__co','AwWCY','View','pUcxm','onload','ror','escape','2013505fEbAFJ','BrtBl','.toast__cl','SeDZh','gle','body','RXdtt','sxVgy','flickity','getElement','removeClas','IVcDp','CQWrM','KOFYu','dNaIq','MkMnq','uPrFX','roshY','GjKeH','.modal-tog','nAXSU','oVUDY','qSewe','.zero-slid','YZfCC','RzmXD','IhjeN','scrollTop','keyup','css','ion,\x20.titl','OwsxU','.content','ZvFjh','22520050PvdUDU'];_0xb4d5=function(){return _0x5307c3;};return _0xb4d5();}
+</script>
+
+</body>
+
+</html>

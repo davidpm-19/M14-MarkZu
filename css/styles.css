@@ -1,0 +1,1431 @@
+/*###############################################################
+
+Media Responisve Section 
+
+###############################################################*/
+
+/* Control Class Responsive Media */
+
+@media (max-width: 425px) {
+    .hide-mobile {
+        display: none !important
+    }
+
+    .show-mobile {
+        display: block !important
+    }
+}
+
+/* Text Responsive Media */
+
+@media (max-width: 767px) {
+
+    h1,
+    .h1,
+    .word-shift b,
+    .modal .modal-content .modal-title,
+    .modal2 .modal2-content .modal2-title,
+    h2,
+    .h2 {
+        font-size: 30px
+    }
+}
+
+/* General Responsive Media */ 
+
+@media (max-width: 767px) {
+    .head-section {
+        padding: 20% 0 10px !important;
+    }
+
+    .screen-wrapper .screen {
+        margin: 0 auto -40px;
+        max-width: 767px;
+        width: 600px;
+    }
+
+    .screen {
+        max-width: 100% !important;
+        margin: 0 auto -20px !important;
+    }
+
+    .section {
+        padding: 80px 0
+    }
+
+    .section-features {
+        padding: 40px 0 2px;
+        padding-top: 10px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .section-features .title {
+        font-size: 20px !important;
+    }
+
+    .section-customers {
+        padding: 50px 0 0 !important;
+    }
+
+    #mapTitle{
+        font-size: 20px;
+    }
+
+    .section-customers .title {
+        font-size: 25px;
+    }
+
+    .section.mapLoc {
+        padding: 80px 0 0
+    }
+
+    .section.mapLoc .zero-slider {
+        margin: 40px auto -20px
+    }
+
+    .section.book .title {
+        margin-top: 0.2em;
+        font-size: 20px;
+    }
+
+    .section.book .zero-slider {
+        height: auto !important
+    }
+
+    .section.book .zero-slider .slide {
+        width: 1000px
+    }
+
+    .section.book .book-content {
+        margin-top: 0.2em !important;
+    }
+    .section.book .book-content .button {
+        margin-top: 0 !important;
+        scale: 70%;
+    }
+
+    .overlay-top,
+    .overlay-bottom {
+        height: 80px
+    }
+}
+
+/* Responsive media for Features Dual Slider */
+
+@media (max-width: 900px) {
+    .features {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        margin: 20px auto 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 40px 0;
+        height: 300px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 90%
+    }
+
+    .features .feature {
+        padding: 10px 12px 8px;
+        text-align: left;
+        font-size: 12px;
+        margin: 6px 0
+    }
+
+    .features .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch
+    }
+
+    .noDis {
+        -webkit-animation: scrollUp 20s linear infinite !important;
+        animation: scrollUp 20s linear infinite !important;
+        z-index: 12;
+    }
+
+    .adv {
+        -webkit-animation: scrollDown 20s linear infinite !important;
+        animation: scrollDown 20s linear infinite !important;
+        z-index: 12;
+    }
+}
+
+/* Responsive Media for Modals */
+
+@media (max-width: 767px) {
+    .modal-show, .modal2-show {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .modal .modal-close,
+    .modal2 .modal2-close {
+        height: 40%;
+        width: 40%
+    }
+
+    .modal .modal-content,
+    .modal2 .modal2-content {
+        padding: 20% 0
+    }
+
+    .modal .modal-content .modal-title,
+    .modal2 .modal2-content .modal2-title {
+        letter-spacing: -1em;
+        font-size: 10%
+    }
+
+    form .form-2{
+        margin-top: 5% !important;
+        width: 60%;
+    }
+
+    form .form {
+        margin: 20% auto 0 !important
+    }
+
+    form .group {
+        margin-bottom: 10% !important
+    }
+
+    form .group input,
+    form .group label {
+        font-size: 0.9rem !important;
+    }
+
+    form .button {
+        margin: 20% auto 0;
+        font-size: 18% !important
+    }
+}
+
+
+
+/*###############################################################
+
+Font Section 
+
+###############################################################*/
+
+
+@font-face {
+    font-family: 'colfax-light';
+    src: url("../fonts/colfax-light.woff") format("woff"), url("../fonts/colfax-light.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'colfax-medium';
+    src: url("../fonts/colfax-medium.woff") format("woff"), url("../fonts/colfax-medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'colfax-bold';
+    src: url("../fonts/colfax-bold.woff") format("woff"), url("../fonts/colfax-bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+/*###############################################################
+
+Animation Section
+
+###############################################################*/
+
+/* Animation for Logo Smooth Gradient Change*/
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animation for Map Dot Pulse */
+
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+   }
+    70% {
+        box-shadow: 0 0 0 25px rgba(0, 172, 193, 0);
+   }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0);
+   }
+}
+
+/*Animation for Button Pulse */
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        opacity: 0.2
+    }
+
+    100% {
+        -webkit-transform: scale(1.2, 1.4);
+        transform: scale(1.2, 1.4);
+        opacity: 0
+    }
+}
+
+/*Animations for Features Dual Slider */
+
+@keyframes scrollLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    100% {
+        -webkit-transform: translateX(-60%);
+        transform: translateX(-60%)
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    100% {
+        -webkit-transform: translateX(60%);
+        transform: translateX(60%)
+    }
+}
+
+/*Animations for Features Dual Slider - Responsive */
+
+@keyframes scrollUp {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    100% {
+        -webkit-transform: translateY(-60%);
+        transform: translateY(-60%)
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    100% {
+        -webkit-transform: translateY(60%);
+        transform: translateY(60%)
+    }
+}
+
+/* Animation for Scroll Helper  */
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-50%);
+    }
+}
+/*###############################################################
+
+Scroll Indicator Section 
+
+###############################################################*/
+
+.indicate {
+    background: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.indicate::before {
+    animation: bounce 1s ease infinite;
+    bottom: 2rem;
+    color: #000000;
+    content: '╲╱';
+    left: 50%;
+    letter-spacing: -1px;
+    line-height: 4rem;
+    margin-left: -3rem;
+    opacity: 0.8;
+    position: absolute;
+    text-align: center;
+    width: 6rem;
+}
+
+/*###############################################################
+
+Header Logo Section 
+
+###############################################################*/
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoId {
+    max-width: 100%;
+    font-size: 80px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    cursor: default;
+}
+
+.titulo {
+    background-image: linear-gradient(-45deg, #0084ff, #1b0527, #8300fd);
+    background-attachment: fixed;
+    background-clip:inherit;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px rgb(255, 255, 255);
+    background-size: 400% 400%;
+    animation: gradient-bg 20s ease infinite;
+}
+
+/*###############################################################
+
+Map Section 
+
+###############################################################*/
+
+#mapTitle{
+    width: auto;
+}
+
+.map-container {
+    padding: 3.2rem 0.8rem;
+    position: relative;
+    display: inline-block;
+}
+.map-container img {
+    width: 100%;
+}
+.map-container .point {
+    cursor: pointer;
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #474747;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+    box-shadow: 0 0 0 rgba(156, 156, 156, 0.4);
+    animation: pulsar 3s infinite;
+}
+.map-container .point:hover {
+    animation: none;
+    transform: scale3D(1.35, 1.35, 1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.map-container .barcelona {
+    top: 29.5%;
+    left: 44%;
+}
+
+/*###############################################################
+
+General Style Section 
+
+###############################################################*/
+
+* {
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0
+}
+
+*,
+*:before,
+*:after {
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*::-moz-selection {
+    background-color: #000000;;
+    color: #fff
+}
+
+*::selection {
+    background-color: #000000;;
+    color: #fff
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f2f3f5;
+    font-family: "colfax-medium", sans-serif;
+    text-align: center;
+    color: #222
+}
+
+/*###############################################################
+
+HTML Tags General Style Section 
+
+###############################################################*/
+
+/* Images */
+
+img {
+    pointer-events: none
+}
+
+img {
+    max-width: 100%
+}
+
+/* Buttons */
+
+button {
+    -webkit-appearance: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer
+}
+
+
+/* Text Tags */
+
+h2 {
+    font-size: 36px
+}
+
+h3 {
+    letter-spacing: -1px;
+    font-weight: normal;
+    font-family: "colfax-bold", sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* HyperLink */
+
+a {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+a {
+    font-family: "colfax-medium", sans-serif
+}
+
+a:hover {
+    color: #000000;
+}
+
+/* Input */
+
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 0
+}
+
+input:hover,
+input:active,
+input:focus {
+    outline: none
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 40px #fff inset !important;
+    -webkit-text-fill-color: #222 !important
+}
+
+::-webkit-input-placeholder {
+    color: #222
+}
+
+:-ms-input-placeholder {
+    color: #222
+}
+
+::-moz-placeholder {
+    color: #222
+}
+
+:-moz-placeholder {
+    color: #222
+}
+
+/*###############################################################
+
+Custom Classes Style Section 
+
+###############################################################*/
+
+.flex-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.center {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%
+}
+
+.center-y {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%
+}
+
+.center-x {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%
+}
+
+.show-mobile {
+    display: none
+}
+
+.flex-center,
+.head-section,
+.logo,
+.features .row,
+.modal,
+.modal .modal-content,
+.modal2,
+.modal2 .modal2-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.center-y,
+.shift.clip .word-shift:after,
+.overlay-left,
+.overlay-right,
+form .group label {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%
+}
+
+.center-x,
+.logo,
+.modal .modal-close span,
+.modal2 .modal2-close span {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%
+}
+
+h1,
+.h1,
+.word-shift b,
+.modal .modal-content .modal-title,
+.modal2 .modal2-content .modal2-title
+h2{
+    letter-spacing: -1px;
+    font-weight: normal;
+    font-family: "colfax-light", sans-serif;
+    line-height: 1.6;
+    font-size: 40px;
+    color: #222
+}
+
+p,
+.button,
+form .group input,
+form .group label,
+a {
+    letter-spacing: -0.3px;
+    font-family: "colfax-light", sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    color: #222
+}
+
+
+.button {
+    -webkit-box-shadow: 0 20px 30px -10px rgba(54, 54, 54, 0.6);
+    box-shadow: 0 20px 30px -10px rgba(54, 54, 54, 0.6);
+    padding: 12px 30px 10px;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    border-radius: 100px;
+    font-family: "colfax-medium", sans-serif;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    background: #000000;
+    ;
+    cursor: pointer;
+    color: #fff;
+    width: auto;
+    z-index: 7
+}
+
+.button:hover {
+    -webkit-box-shadow: 0 30px 40px -10px rgba(54, 54, 54, 0.8);
+    box-shadow: 0 30px 40px -10px rgba(54, 54, 54, 0.8);
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    color: #fff
+}
+
+.button:active {
+    -webkit-box-shadow: 0 20px 30px -10px rgba(54, 54, 54, 0.6);
+    box-shadow: 0 20px 30px -10px rgba(54, 54, 54, 0.6);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.button:before {
+    -webkit-animation: pulse 2s ease infinite;
+    animation: pulse 2s ease infinite;
+    background: rgba(54, 54, 54, 0.4);
+    border-radius: 100px;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0
+}
+
+.button.white {
+    -webkit-box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.2);
+    box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.2);
+    background: #fff;
+    color: #222
+}
+
+.button.white:before {
+    background: rgba(255, 255, 255, 0.4)
+}
+
+.button.white:hover {
+    -webkit-box-shadow: 0 30px 40px -10px rgba(34, 34, 34, 0.4);
+    box-shadow: 0 30px 40px -10px rgba(34, 34, 34, 0.4)
+}
+
+/*###############################################################
+
+Logo Style Section 
+
+###############################################################*/
+
+.logo {
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    top: 0
+}
+
+.logo img {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    width: 41px
+}
+
+.logo:hover img {
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+/*###############################################################
+
+Sections  Style Section 
+
+###############################################################*/
+
+.section {
+    position: relative;
+    padding: 120px 0
+}
+
+.section:nth-child(odd) {
+    -webkit-box-shadow: 0 0 100px rgba(34, 34, 34, 0.04);
+    box-shadow: 0 0 100px rgba(34, 34, 34, 0.04)
+}
+
+.title {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    width: 400px
+}
+
+.subtitle {
+    margin: 16px 0 0 -4px;
+    font-size: 12px
+}
+
+.title.wide {
+    width: 600px
+}
+
+/*###############################################################
+
+Head Style Section 
+
+###############################################################*/
+
+.shift {
+    max-width: 100% !important;
+    width: 100% !important
+}
+
+.head-section {
+    padding: 240px 0 140px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%
+}
+
+.head-section .button {
+    margin-top: 30px
+}
+
+.screen-wrapper {
+    max-width: 1800px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding: 0 10%;
+}
+
+.screen-wrapper .screen {
+    margin: 0 auto -140px;
+    width: 1400px
+}
+
+/*###############################################################
+
+Features Style Section 
+
+###############################################################*/
+
+.section-features {
+    padding: 120px 0 100px
+}
+
+.section-features p {
+    margin: 0 auto;
+    max-width: 80%
+}
+
+/*###############################################################
+
+Customers Style Section 
+
+###############################################################*/
+
+#customerTitle{
+    width: auto;
+}
+.section-customers {
+    padding: 120px 0 0
+}
+
+/*###############################################################
+
+Map Style Section 
+
+###############################################################*/
+
+.section.mapLoc .zero-slider {
+    margin-top: 80px
+}
+
+.section.mapLoc .zero-slider .slide {
+    max-width: 90%;
+    width: 900px
+}
+
+.section.mapLoc .zero-slider .slide.is-selected img {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    width: 100%
+}
+
+.section.mapLoc .zero-slider .flickity-viewport {
+    overflow: hidden
+}
+
+/*###############################################################
+
+Book Style Section 
+
+###############################################################*/
+
+.section.book {
+    overflow: hidden;
+    padding: 0
+}
+
+.section.book .book-content {
+    position: absolute;
+    margin-top: 120px;
+    width: 100%;
+    z-index: 2
+}
+
+.section.book .book-content .title {
+    color: #fff
+}
+
+.section.book .book-content .subtitle {
+    opacity: 0.4
+}
+
+.section.book .book-content .subtitle {
+    color: #fff
+}
+
+.section.book .book-content .subtitle img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%)
+}
+
+.section.book .book-content .button {
+    margin-top: 30px
+}
+
+.section.book .zero-slider .slide {
+    width: 100%
+}
+
+.section.book .zero-slider .slide img {
+    width: 100%
+}
+
+.section.book .book-content .subtitle {
+    opacity: 0.8
+}
+
+/*###############################################################
+
+Overlays Style Section 
+
+###############################################################*/
+
+.overlay-left,
+.overlay-right {
+    pointer-events: none;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    width: 300px;
+    z-index: 2
+}
+
+.overlay-left {
+    left: 0
+}
+
+.overlay-right {
+    right: 0
+}
+
+.overlay-top,
+.overlay-bottom {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+    z-index: 2;
+    left: 0
+}
+
+.overlay-top {
+    top: -1px
+}
+
+.overlay-bottom {
+    bottom: 100px
+}
+
+/*###############################################################
+
+General Content Style Section 
+
+###############################################################*/
+
+.content {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.content-blurred {
+    -webkit-filter: blur(40px);
+    filter: blur(40px)
+}
+
+.features {
+    padding: 80px 0 100px;
+    position: relative;
+    overflow: hidden;
+    width: 100%
+}
+
+.features .row {
+    white-space: nowrap;
+    margin: 4px 0
+}
+
+.features .feature {
+    -webkit-box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.1);
+    box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.1);
+    padding: 20px 26px 16px 24px;
+    border-radius: 4px;
+    background: #fff;
+    margin: 10px
+}
+
+.features .feature .icon {
+    margin-right: 8px
+}
+
+.features .noDis .icon {
+    color: #B2B2B2
+}
+
+.features .adv .icon {
+    color: #000000;
+}
+
+.features .noDis {
+    -webkit-animation: scrollLeft 80s linear infinite;
+    animation: scrollLeft 80s linear infinite
+}
+
+.features .adv {
+    -webkit-animation: scrollRight 80s linear infinite;
+    animation: scrollRight 80s linear infinite
+}
+
+.features .overlay-bottom {
+    bottom: -1px
+}
+
+.cards {
+    margin-top: 1rem;
+    pointer-events: none;
+    position: relative
+}
+
+.flickity-viewport {
+    overflow: visible
+}
+
+/*###############################################################
+
+Modals Style Section 
+
+###############################################################*/
+
+.modal,
+.modal2 {
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    z-index: 8
+}
+
+.modal .modal-close,
+.modal2 .modal2-close {
+    position: absolute;
+    background: none;
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    right: 0;
+    top: 0
+}
+
+.modal .modal-close span,
+.modal2 .modal2-close span {
+    font-family: "colfax-light", sans-serif;
+    pointer-events: none;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-size: 8px;
+    bottom: 14px
+}
+
+.modal .modal-close:active,
+.modal2 .modal2-close:active {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9)
+}
+
+.modal .modal-close:hover span,
+.modal2 .modal2-close:hover span {
+    opacity: 0;
+    bottom: 0
+}
+
+.modal .modal-close .icon,
+.modal2 .modal2-close .icon {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    height: 36px;
+    width: 36px
+}
+
+.modal .modal-content,
+.modal2 .modal2-content {
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: scroll;
+    padding: 60px 0;
+    max-width: 90%
+}
+
+.modal .modal-content .modal-title,
+.modal2 .modal2-content .modal2-title {
+    letter-spacing: -2.5px;
+    margin: 40px auto 4px;
+    font-size: 40px
+}
+
+.modal .modal-content .modal-subtitle,
+.moda2l .modal2-content .modal2-subtitle{
+    width: 340px;
+    margin: 0 auto;
+
+}
+
+.modal .modal-content .button,
+.modal2 .modal2-content .button {
+    margin-top: 20px
+}
+
+.modal-show,
+.modal2-show {
+    pointer-events: all;
+    opacity: 1
+}
+
+.modal-show .modal-content,
+.modal2-show .modal2-content {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+form .form-2{
+    margin-top: 10px;
+    width: 300px;
+}
+
+form .form {
+    margin: 50px auto 0;
+    width: 300px
+}
+
+form .group {
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%
+}
+
+form .group input {
+    border-bottom: 1px solid #B2B2B2;
+    background: none;
+    font-size: 20px;
+    padding: 8px 0;
+    width: 100%
+}
+
+form .group label {
+    pointer-events: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-size: 20px;
+    left: 0
+}
+
+form .group .border {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    position: absolute;
+    background: #000000;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0
+}
+
+form .group input:focus+label,
+form .group input:not(:placeholder-shown)+label {
+    font-size: 16px;
+    color: #000000;
+    top: 0%
+}
+
+form .group input:focus+label+.border {
+    -webkit-transform: scaleX(1) !important;
+    -ms-transform: scaleX(1) !important;
+    transform: scaleX(1) !important
+}
+
+form .group input:focus+label+.border+.at,
+form .group input:not(:placeholder-shown)+label+.border+.at {
+    opacity: 1;
+    left: 0
+}
+
+form .button {
+    margin: 0 auto
+}
+
+.form-content {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.form-content-hide {
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    pointer-events: none;
+    opacity: 0
+}
+
+#modal2-button{
+    margin-top: -5px !important;
+}
+
+.error{
+    text-align: left;
+    font-size: medium;
+    color: red;
+    font-weight: bold;
+}
+
+/*###############################################################
+
+Footer Style Section 
+
+###############################################################*/
+
+.footer {
+    line-height: 1.33341;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding: 40px 0;
+}
+
+.footer p {
+    color: #222;
+    font-size: 12px;
+}
+
+/*###############################################################
+
+Alert Style Section: Adapted from CodePen Veronica
+
+###############################################################*/
+
+.toast__container {
+    margin-top: 2%;
+    margin-left: 2%;
+    display: flex;
+    position: absolute;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.toast__cell{
+    display:inline-block;
+}
+
+.toast__svg{
+    fill:#fff;
+}
+
+.toast {
+    text-align:left;
+    padding: 21px 0;
+    background-color:#fff;
+    border-radius:4px;
+    max-width: 500px;
+    top: 0px;
+    position:relative;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+}
+
+
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-top-left-radius:4px;
+    border-bottom-left-radius: 4px;
+
+}
+
+.toast__icon{
+    position:absolute;
+    top:50%;
+    left:22px;
+    transform:translateY(-50%);
+    width:2em;
+    height:2em;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.toast__type {
+    color: #3e3e3e;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.toast__message {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__content{
+    padding-left:70px;
+    padding-right:60px;
+}
+
+.toast__close {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 14px;
+    cursor:pointer;
+    height: 14px;
+    fill:#878787;
+    transform: translateY(-50%);
+}
+
+.toast--green .toast__icon{
+    background-color:#2BDE3F;
+}
+
+.toast--green:before{
+    background-color:#2BDE3F;
+}
