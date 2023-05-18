@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO IN PROGRESS</title>
+</head>
+<style>
+:root {
+    --background-rgb: 29 30 34;
+    
+    --blue-rgb: 103 33 243;
+    --primary-rgb: var(--blue-rgb);
+  }
+
+  body {
+    height: 100vh;
+    width: auto;
+    display: grid;
+    place-items: center;
+    background-position: 50% 50%;
+    background-image: url(https://wallpaperaccess.com/full/17520.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(0.5vmax);
+    margin: 0rem;
+    overflow: hidden;
+  }
+  
+  .screen {
+    height: auto;
+    width: 500px;
+    display: flex;
+    border: 3px solid rgb(var(--primary-rgb) / 80%);
+    aspect-ratio: 10 / 16;
+    border-radius: 1rem;
+    background-color: rgb(var(--primary-rgb) / 15%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    scale: 0.8;
+  }
+  
+  @keyframes pan-overlay {
+    from {
+      background-position: 0% 0%;
+    }
+    
+    to {
+      background-position: 0% -100%;
+    }
+  }
+  
+  .screen-overlay {    
+    background: linear-gradient(
+      rgb(var(--primary-rgb) / 0.15),
+      rgb(var(--primary-rgb) / 0.15) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+  }
+  
+  @keyframes pan-image {  
+    0% {
+      background-position: 36% 42%;
+      background-size: 400%;
+    }
+    
+    20% {
+      background-position: 30% 35%;
+      background-size: 400%;
+    }
+    
+    20.0001% { /* -- View 2 -- */
+      background-position: 60% 85%;
+      background-size: 500%;
+    }
+    
+    40% {
+      background-position: 49% 81%;
+      background-size: 500%;
+    }
+    
+    40.0001% { /* -- View 3 -- */
+      background-position: 80% 42%;
+      background-size: 300%;
+    }
+    
+    60% {
+      background-position: 84% 33%;
+      background-size: 300%;
+    }
+    
+    60.0001% { /* -- View 4 -- */
+      background-position: 0% 0%;
+      background-size: 300%;
+    }
+    
+    80% {
+      background-position: 15% 4%;
+      background-size: 300%;
+    }
+    
+    80.0001% { /* -- View 5 -- */
+      background-position: 80% 10%;
+      background-size: 300%;
+    }
+    
+    100% {
+      background-position: 72% 14%;
+      background-size: 300%;
+    }
+  }
+  
+  .screen > .screen-image {
+    background-image: url(https://wallpaperaccess.com/full/17520.jpg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background-size: 300%;
+    background-position: 0% 0%;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.6;
+    animation: pan-image 15s linear infinite;
+  }
+  
+  .screen > .screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 4rem;
+    position: relative;
+    z-index: 3;
+    margin: 1rem;
+    padding-bottom: 6rem;
+    border: 1px solid rgb(var(--primary-rgb) / 50%);
+    border-radius: 0.6rem;
+  }
+  
+  .screen > .screen-content > .screen-icon {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0px 0px 0.5rem white;
+  }
+  
+  .screen > .screen-content > .screen-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  .screen > .screen-content > .screen-user > :is(.name, .info) {
+    font-family: "Source Code Pro", monospace;
+    color: white; 
+    text-align: center;
+    text-transform: uppercase; 
+  }
+  
+  .screen > .screen-content > .screen-user > .name {
+    position: relative;
+    font-size: 4.25rem;
+    font-weight: 400;
+  }
+  
+  .screen > .screen-content > .screen-user > .name:before,
+  .screen > .screen-content > .screen-user > .name:after {
+    content: "";
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    border-width: 37px 0px 37px 60px;
+    border: 2px solid white;
+  }
+  
+  .screen > .screen-content > .screen-user > .name:before {
+    top: 55%;
+    right: -1.5rem;
+  }
+  
+  .screen > .screen-content > .screen-user > .name:after {
+    top: 45%;
+    left: -1.5rem;  
+  }
+  
+  .screen > .screen-content > .screen-user > .info {  
+    opacity: 0.8;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 0.5rem white;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+  }
+  
+  @media(max-width: 700px) {
+    .screen {
+      scale: 0.6;
+      margin-bottom: 0rem;
+      position: absolute;
+    }
+  }
+
+  @media(max-width: 320px) {
+    .screen {
+        position: absolute;
+        scale: 0.4;
+        margin-bottom: 0rem;
+    }
+  }
+</style>
+<body id="blurred">
+    <div class="screen">
+        <div class="screen-image"></div>
+        <div class="screen-overlay"></div>
+        <div class="screen-content">
+            <i class="screen-icon fa-brands fa-codepen"></i>
+            <div class="screen-user">
+                <span class="name">DAVID</span>
+              <a class="info" href="#">ANSIBLE</a>
+            </div>
+        </div>
+    </div>
+</body>
